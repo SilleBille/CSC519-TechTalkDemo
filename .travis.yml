@@ -1,0 +1,32 @@
+language: python
+
+env:
+  global:
+    - DUMMY_VARIABLE="Dummy Variable"
+
+before_install:
+  - echo "I'm installing additional dependency stuff required for this build"
+  - pip install pep8
+
+install: 
+  - echo "Installing dependencies for the project"
+
+before_script:
+  - echo "Setting up files required to build the project Eg. copying stuffs"
+
+script:
+  - python testing.py
+
+after_success:
+  - echo "The build was successful."
+
+after_failure:
+  - echo "The build was failed. Uploading logs"
+  - echo "Dummy failed log for "$TRAVIS_BUILD_NUMBER  > log.txt
+  - curl --upload-file ./log.txt https://transfer.sh/log.txt 
+
+deploy:
+  - echo "I am deploying stuff to the requested destination"
+
+after_deploy:
+  - echo "I will be cleaning stuff here after deployment"
