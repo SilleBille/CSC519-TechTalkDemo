@@ -25,9 +25,3 @@ after_failure:
   - echo "The build was failed. Uploading logs"
   - echo "Dummy failed log for "$TRAVIS_BUILD_NUMBER  > log.txt
   - curl --upload-file ./log.txt https://transfer.sh/log.txt 
-
-deploy:
-  - echo "I am deploying stuff to the requested destination"
-
-after_deploy:
-  - echo "I will be cleaning stuff here after deployment"
