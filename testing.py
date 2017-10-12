@@ -1,3 +1,5 @@
 import sys
-print "This is a Failing build"
-sys.exit(-1)
+import os
+print "This is a successful build"
+print os.environ['DUMMY_VARIABLE']
+sys.exit(0)
