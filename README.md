@@ -4,7 +4,7 @@
 
 A simple repo to demonstrate the working of Travis
 
-# Presenters
+## Presenters
 - Dinesh Prasanth M K
 - Mukundram Muraliram
 - Vishal Murugan
@@ -27,3 +27,11 @@ A simple repo to demonstrate the working of Travis
     - It's easy and fast to start like Travis CI
     - It's also a hosted service
     - It's much cheaper for projects which aren't open source compared to Travis CI
+
+### Screencast - Demo
+- [Screen Cast](https://youtu.be/SGGI7g2pjrY)
+- [Instruction to set up Personal Travis](http://pki.fedoraproject.org/wiki/Personal_Travis_CI_build)
+
+### Advanced Usage
+- Advanced scenario on how RedHat's Dogtag PKI infrastructure uses Travis CI is available [here](http://pki.fedoraproject.org/wiki/Travis_CI#Pictorial_Representation)
+- Production Travis Environment is accessible [here](https://travis-ci.org/dogtagpki/pki)
