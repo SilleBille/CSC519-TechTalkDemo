@@ -9,3 +9,21 @@ A simple repo to demonstrate the working of Travis
 - Mukundram Muraliram
 - Vishal Murugan
 - Manushri
+
+### Pros and Cons of Travis
+| **Pros** | **Cons** |
+|:---------|:---------|
+|It is very easy to setup| The hosted service can only work with github|
+|Travis can be integrated easily with applications such as Slack or HipChat to give us instant notifications about build status|Builds with more dependencies take more time as the dependencies would have to installed each time. Though some directories can be cached, it is not as fast as running it on a pre-installed system (if there is such a need)|
+|It is a hosted service|No file sharing between jobs|
+|Completely free for open source projects|No access to the machines where jobs are run|
+
+### Other Popular Competitors and their advantages
+- Jenkins
+    - Has more customizations via plugins
+    - Is completely free to use
+    - We can have full control of the system as Jenkins is run on our system
+- Circle CI
+    - It's easy and fast to start like Travis CI
+    - It's also a hosted service
+    - It's much cheaper for projects which aren't open source compared to Travis CI
