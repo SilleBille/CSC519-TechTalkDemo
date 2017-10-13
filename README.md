@@ -13,6 +13,17 @@ A simple repo to demonstrate the working of Travis
 ### Screencast - Demo
 - [Screen Cast](https://youtu.be/SGGI7g2pjrY)
 
+### What is Continuous Integration?
+
+Continuous Integration (CI) is a software development ideology where developers frequently contribute to a central repository. Automated test scripts are run on the pushes. This way, code is often merged and tested leading to early detection of bugs and errors. CI is known to reduce the time spent on identifying and rectifying bugs and boost the software development time. By integrating periodically, CI also prevents a merging hell.
+
+### Travis CI
+
+Travis CI is a service built on Ruby commonly used to continually integrate software under development. It is a hosted, distributed service that integrates with GitHub and supports almost all the languages in widespread use today.Travis CI is automated and requires almost no maintanence. 
+
+### Travis Keywords
+
+
 ### Instructions to use run this sample project
 1. Clone this project
 2. `cd CSC519-TechTalkDemo`
