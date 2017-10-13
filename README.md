@@ -13,6 +13,9 @@ A simple repo to demonstrate the working of Travis
 ### Screencast - Demo
 - [Screen Cast](https://youtu.be/SGGI7g2pjrY)
 
+### Slides - Demo
+- [Slides](https://docs.google.com/a/ncsu.edu/presentation/d/1KHg0NRKmN-UuNzs5eLzCP_L7MbhOxMFBYP0836zA5mY/edit?usp=sharing)
+
 ### What is Continuous Integration?
 
 Continuous Integration (CI) is a software development ideology where developers frequently contribute to a central repository. Automated test scripts are run on the pushes. This way, code is often merged and tested leading to early detection of bugs and errors. CI is known to reduce the time spent on identifying and rectifying bugs and boost the software development time. By integrating periodically, CI also prevents a merging hell.
@@ -49,29 +52,29 @@ Travis CI is a service built on Ruby commonly used to continually integrate soft
 - [Instruction to set up Personal Travis](http://pki.fedoraproject.org/wiki/Personal_Travis_CI_build)
 ### Advanced Use Cases of Travis CI
 #### Build Matrix
-Creating a build matrix is a way for users to test a wide variety of environments. By declaring certain options, Travis will take those options, and run a build for every possible permutation of the options. 
+Users can create a build matrix to test a wide variety of environments. By declaring certain options for Environment Variables, Jobs to Run, Include/Exclude Statements, Travis will run a build for every possible permutation of these options. 
 
 #### Build stages (Beta)
-Build stages is a way to group jobs, and run jobs in each stage in parallel, but run one stage after another sequentially.
-A stage is a group of jobs that are allowed to run in parallel. However, each one of the stages runs one after another, and will only proceed if all jobs in the previous stage have passed successfully. If one job fails in one stage, all other jobs on the same stage will still complete, but all jobs in subsequent stages will be canceled, and the build fails.
+Build stages is a way to group jobs. Jobs in each stage are executed parallelly, however, stages are executed sequentially.
+A stage will begin execution only after all jobs in the previous stage have passed successfully. If one job fails in a stage, all other jobs on the same stage will still complete. However, the subsequent stages will not begin exection.
 
 ![Build Stages](https://cloud.githubusercontent.com/assets/3729517/25229553/0868909c-25d1-11e7-9263-b076fdef9288.gif)
 
 #### Docker usage
-Travis CI builds can run and build Docker images, and can also push images to Docker repositories or other remote storage.
-Add docker as one of the services in .travis.yml file and the user can continue to use docker commands in the shell. Can be used to:
+Docker is provided as one of the services for Travis CI.  Add docker as one of the services in .travis.yml file and the user can continue to use docker commands in the shell.
+Docker can be used to:
 -   Pull Docker images from central or private registries and start them up as part of your build.
 -   Set up a build environment that closely matches your development or production environments to run your tests.
 -   Set up an environment close to your production systems to run your code in and run your tests against.
 -   Build a Docker image before, after or during a successful build and ship it to a registry so you can use it on your staging or production systems.
+(Reference for Docker: https://blog.travis-ci.com/2015-08-19-using-docker-on-travis-ci/)
 
 #### Cron jobs
-Run builds at regular scheduled intervals independently of whether any commits were pushed to the repository. Cron jobs always fetch the most recent commit on a particular branch and build the project at that state. 
-Cron build schedules can be defined by a build interval that is either daily, weekly, or monthly, with the cron starting around the time it was created.
+In addition to running builds after a git push, users can also run builds at regular scheduled intervals independently of whether any commits were pushed to the repository. The most recent commit on a particular branch is fetched by Travis-CI and the project builds at that state. Daily, weekly, or monthly builds can be scheduled.The cron starts around the time the build is created.
 
 ![Cron Job tab in Travis](https://blog.travis-ci.com/images/2016-12-06.16.00.59.png)
 
-In addition, a job can be configured to either:
+A job can also be configured to either:
 1. always run
 2. skip if there has already been a regular build in the last 24 hours
 
