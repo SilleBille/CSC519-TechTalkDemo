@@ -23,13 +23,13 @@ A simple repo to demonstrate the working of Travis
     - builds at regular scheduled intervals independently
     - can run daily, weekly or monthly 
 - 3rd party APIs and apps
-        Websites: Full Web Clients, Dashboards, Tools
-        Mobile Applications: Android, iOS, Windows Phone
-        Desktop: Mac OS X, Linux, Windows, Cross Platform
-        Command Line Tools: Full Clients, Build Monitoring, Generators
-        Plugins: Google Chrome, Mozilla Firefox, Opera, Editors, git-travis 
-        Libraries: Ruby, JavaScript, PHP, Python, Elixir
-        Link: https://docs.travis-ci.com/user/apps/
+        - Websites: Full Web Clients, Dashboards, Tools
+        - Mobile Applications: Android, iOS, Windows Phone
+        - Desktop: Mac OS X, Linux, Windows, Cross Platform
+        - Command Line Tools: Full Clients, Build Monitoring, Generators
+        - Plugins: Google Chrome, Mozilla Firefox, Opera, Editors, git-travis 
+        - Libraries: Ruby, JavaScript, PHP, Python, Elixir
+        - Link: https://docs.travis-ci.com/user/apps/
 
 ### Pros and Cons of Travis
 | **Pros** | **Cons** |
