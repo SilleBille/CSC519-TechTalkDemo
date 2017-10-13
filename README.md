@@ -10,6 +10,27 @@ A simple repo to demonstrate the working of Travis
 - Vishal Murugan
 - Manushri
 
+### Advanced Use Cases of Jenkins
+- Build Matrix
+    - test a wide variety of environments
+- Docker usage
+    - run and build Docker images
+    - push images to Docker repositories
+    - Set up a build environment using Docker
+- Build stages (Beta)
+    - Group jobs in stages
+- Cron jobs
+    - builds at regular scheduled intervals independently
+    - can run daily, weekly or monthly 
+- 3rd party APIs and apps
+        Websites: Full Web Clients, Dashboards, Tools
+        Mobile Applications: Android, iOS, Windows Phone
+        Desktop: Mac OS X, Linux, Windows, Cross Platform
+        Command Line Tools: Full Clients, Build Monitoring, Generators
+        Plugins: Google Chrome, Mozilla Firefox, Opera, Editors, git-travis 
+        Libraries: Ruby, JavaScript, PHP, Python, Elixir
+        Link: https://docs.travis-ci.com/user/apps/
+
 ### Pros and Cons of Travis
 | **Pros** | **Cons** |
 |:---------|:---------|
