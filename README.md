@@ -10,7 +10,33 @@ A simple repo to demonstrate the working of Travis
 - Vishal Murugan
 - Manushri
 
-### Advanced Use Cases of Jenkins
+### Screencast - Demo
+- [Screen Cast](https://youtu.be/SGGI7g2pjrY)
+
+### Instructions to use run this sample project
+1. Clone this project
+2. `cd CSC519-TechTalkDemo`
+3. `.travis.yml` - When this file is added to a repo, Travis CI can be triggered whenever there is a push to this repo
+4. `./success.sh` - runs and commits a successful build
+5. `./failure.sh` - runs and commits a failing build
+
+### Linking Travis to your repo
+1. Add the forked repository by clicking the `+` sign next to My Repositories. 
+
+![Adding](http://pki.fedoraproject.org/images/a/ac/Travis_2.png)
+
+2. Turn on the switch for the project you want Travis to be integrated. If necessary, click on `Sync projects from GitHub` to refresh the list of repositories. 
+
+![Enabling](http://pki.fedoraproject.org/images/0/0c/Travis_4.png)
+
+3. To verify whether the integration was successful, in your project, go to **Settings -> Integration & services**, verify that Travis CI appears under **Services**. 
+
+![Verification](http://pki.fedoraproject.org/images/thumb/8/81/Travis_5.png/800px-Travis_5.png)
+
+
+### Instructions to setup Travis for personal opensource projects
+- [Instruction to set up Personal Travis](http://pki.fedoraproject.org/wiki/Personal_Travis_CI_build)
+### Advanced Use Cases of Travis CI
 #### Build Matrix
 Creating a build matrix is a way for users to test a wide variety of environments. By declaring certain options, Travis will take those options, and run a build for every possible permutation of the options. 
 
@@ -60,10 +86,6 @@ Link: https://docs.travis-ci.com/user/apps/
     - It's easy and fast to start like Travis CI
     - It's also a hosted service
     - It's much cheaper for projects which aren't open source compared to Travis CI
-
-### Screencast - Demo
-- [Screen Cast](https://youtu.be/SGGI7g2pjrY)
-- [Instruction to set up Personal Travis](http://pki.fedoraproject.org/wiki/Personal_Travis_CI_build)
 
 ### Advanced Usage
 - Advanced scenario on how RedHat's Dogtag PKI infrastructure uses Travis CI is available [here](http://pki.fedoraproject.org/wiki/Travis_CI#Pictorial_Representation)
