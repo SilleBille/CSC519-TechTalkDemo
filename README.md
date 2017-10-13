@@ -51,6 +51,12 @@ Travis CI is a service built on Ruby commonly used to continually integrate soft
 #### Build Matrix
 Creating a build matrix is a way for users to test a wide variety of environments. By declaring certain options, Travis will take those options, and run a build for every possible permutation of the options. 
 
+#### Build stages (Beta)
+Build stages is a way to group jobs, and run jobs in each stage in parallel, but run one stage after another sequentially.
+A stage is a group of jobs that are allowed to run in parallel. However, each one of the stages runs one after another, and will only proceed if all jobs in the previous stage have passed successfully. If one job fails in one stage, all other jobs on the same stage will still complete, but all jobs in subsequent stages will be canceled, and the build fails.
+
+![Build Stages](https://cloud.githubusercontent.com/assets/3729517/25229553/0868909c-25d1-11e7-9263-b076fdef9288.gif)
+
 #### Docker usage
 Travis CI builds can run and build Docker images, and can also push images to Docker repositories or other remote storage.
 Add docker as one of the services in .travis.yml file and the user can continue to use docker commands in the shell. Can be used to:
@@ -59,13 +65,12 @@ Add docker as one of the services in .travis.yml file and the user can continue 
 -   Set up an environment close to your production systems to run your code in and run your tests against.
 -   Build a Docker image before, after or during a successful build and ship it to a registry so you can use it on your staging or production systems.
 
-#### Build stages (Beta)
-Build stages is a way to group jobs, and run jobs in each stage in parallel, but run one stage after another sequentially.
-A stage is a group of jobs that are allowed to run in parallel. However, each one of the stages runs one after another, and will only proceed if all jobs in the previous stage have passed successfully. If one job fails in one stage, all other jobs on the same stage will still complete, but all jobs in subsequent stages will be canceled, and the build fails.
-
 #### Cron jobs
 Run builds at regular scheduled intervals independently of whether any commits were pushed to the repository. Cron jobs always fetch the most recent commit on a particular branch and build the project at that state. 
 Cron build schedules can be defined by a build interval that is either daily, weekly, or monthly, with the cron starting around the time it was created.
+
+![Cron Job tab in Travis](https://blog.travis-ci.com/images/2016-12-06.16.00.59.png)
+
 In addition, a job can be configured to either:
 1. always run
 2. skip if there has already been a regular build in the last 24 hours
@@ -101,3 +106,8 @@ Link: https://docs.travis-ci.com/user/apps/
 ### Advanced Usage
 - Advanced scenario on how RedHat's Dogtag PKI infrastructure uses Travis CI is available [here](http://pki.fedoraproject.org/wiki/Travis_CI#Pictorial_Representation)
 - Production Travis Environment is accessible [here](https://travis-ci.org/dogtagpki/pki)
+
+### References
+- Advanced scenario references taken from:
+    - https://docs.travis-ci.com/
+    - https://blog.travis-ci.com/
