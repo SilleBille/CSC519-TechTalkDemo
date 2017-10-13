@@ -20,12 +20,18 @@ A simple repo to demonstrate the working of Travis
 
 Continuous Integration (CI) is a software development ideology where developers frequently contribute to a central repository. Automated test scripts are run on the pushes. This way, code is often merged and tested leading to early detection of bugs and errors. CI is known to reduce the time spent on identifying and rectifying bugs and boost the software development time. By integrating periodically, CI also prevents a merging hell.
 
+![Continuous Integration](https://www.soasta.com/wp-content/uploads/2016/01/infitiny-circle_v1.png)
+
 ### Travis CI
 
 Travis CI is a service built on Ruby commonly used to continually integrate software under development. It is a hosted, distributed service that integrates with GitHub and supports almost all the languages in widespread use today.Travis CI is automated and requires almost no maintanence. 
 
 ### Travis Keywords
 
+- Build - A build is one automated run of tests on a submitted commit
+- Job - A job is the fundamental unit of tests run sequentially (usually a job is spawned for each environment)
+- Phase - A job is made of phases executed sequentially (like installation phase, script phase etc.)
+- Stage - A build can be divided into stages that are executed sequentially. Each stage is made up of jobs that are executed concurrently. 
 
 ### Instructions to use run this sample project
 1. Clone this project
