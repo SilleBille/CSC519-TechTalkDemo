@@ -11,25 +11,37 @@ A simple repo to demonstrate the working of Travis
 - Manushri
 
 ### Advanced Use Cases of Jenkins
-- Build Matrix
-    - test a wide variety of environments
-- Docker usage
-    - run and build Docker images
-    - push images to Docker repositories
-    - Set up a build environment using Docker
-- Build stages (Beta)
-    - Group jobs in stages
-- Cron jobs
-    - builds at regular scheduled intervals independently
-    - can run daily, weekly or monthly 
-- 3rd party APIs and apps
-        - Websites: Full Web Clients, Dashboards, Tools
-        - Mobile Applications: Android, iOS, Windows Phone
-        - Desktop: Mac OS X, Linux, Windows, Cross Platform
-        - Command Line Tools: Full Clients, Build Monitoring, Generators
-        - Plugins: Google Chrome, Mozilla Firefox, Opera, Editors, git-travis 
-        - Libraries: Ruby, JavaScript, PHP, Python, Elixir
-        - Link: https://docs.travis-ci.com/user/apps/
+#### Build Matrix
+Creating a build matrix is a way for users to test a wide variety of environments. By declaring certain options, Travis will take those options, and run a build for every possible permutation of the options. 
+
+#### Docker usage
+Travis CI builds can run and build Docker images, and can also push images to Docker repositories or other remote storage.
+Add docker as one of the services in .travis.yml file and the user can continue to use docker commands in the shell. Can be used to:
+-   Pull Docker images from central or private registries and start them up as part of your build.
+-   Set up a build environment that closely matches your development or production environments to run your tests.
+-   Set up an environment close to your production systems to run your code in and run your tests against.
+-   Build a Docker image before, after or during a successful build and ship it to a registry so you can use it on your staging or production systems.
+
+#### Build stages (Beta)
+Build stages is a way to group jobs, and run jobs in each stage in parallel, but run one stage after another sequentially.
+A stage is a group of jobs that are allowed to run in parallel. However, each one of the stages runs one after another, and will only proceed if all jobs in the previous stage have passed successfully. If one job fails in one stage, all other jobs on the same stage will still complete, but all jobs in subsequent stages will be canceled, and the build fails.
+
+#### Cron jobs
+Run builds at regular scheduled intervals independently of whether any commits were pushed to the repository. Cron jobs always fetch the most recent commit on a particular branch and build the project at that state. 
+Cron build schedules can be defined by a build interval that is either daily, weekly, or monthly, with the cron starting around the time it was created.
+In addition, a job can be configured to either:
+1. always run
+2. skip if there has already been a regular build in the last 24 hours
+
+#### 3rd party APIs and apps
+-   Websites: Full Web Clients, Dashboards, Tools
+-   Mobile Applications: Android, iOS, Windows Phone
+-   Desktop: Mac OS X, Linux, Windows, Cross Platform
+-   Command Line Tools: Full Clients, Build Monitoring, Generators
+-   Plugins: Google Chrome, Mozilla Firefox, Opera, Editors, git-travis 
+-   Libraries: Ruby, JavaScript, PHP, Python, Elixir
+
+Link: https://docs.travis-ci.com/user/apps/
 
 ### Pros and Cons of Travis
 | **Pros** | **Cons** |
